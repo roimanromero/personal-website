@@ -297,6 +297,13 @@ main section img {
   grid-column: 3/5;
   grid-row: 3/5;
 }
+#questions {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+}
 .faqs{
   max-width: 90%;
   padding: 35px;
@@ -308,17 +315,9 @@ main section img {
   max-width: 80%;
   padding: 35px;
   grid-column: 3/5;
-  justify-content: center;
-  
-} 
-#questions {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: space-around;
-
+  justify-content: center; 
 }
+
 #faqstitle{
   grid-column: 1/5;
 }
