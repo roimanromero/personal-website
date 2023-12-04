@@ -55,6 +55,14 @@
                 <h2>More Than Just a Fruit</h2>
                 <p>Enjoy the fascinating world of mangoes and its marvelous recepies, also new products and information of mangoes that can help you discover the benefits of eating mangoes every day.   </p>
                 <a class='join' href="rivers.html">Join Us</a>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Support</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="https://fruitleather.nl/">Fruit Leather</a>
+                      <a href="https://www.mangomaterials.com/">Mango Materials</a>
+                      <a href="https://www.alliedmarketresearch.com/processed-mango-products-market">Market Research</a>
+                    </div>
+                  </div>
             </section>
         </main>
         <footer>
@@ -74,5 +82,26 @@
             </div>
         </footer>
     </div>
+    <script>/* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+        }
+    </script>
+        
 </body>
 </html>
