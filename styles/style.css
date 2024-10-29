@@ -371,3 +371,40 @@ main section img {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+/* Search Bar and Buttons */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#searchBar, #searchButton, #lastRecipesButton {
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 2px solid #21531a;
+    border-radius: 5px;
+}
+
+#lastRecipesSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+#lastRecipesSection.show {
+    max-height: 500px;
+}
+
+.recipe-card {
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
