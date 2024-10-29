@@ -445,3 +445,25 @@ main section img {
   border-radius: 5px;
   cursor: pointer;
 }
+/* 3D Button Style */
+#searchButton, #lastRecipesButton, #saveRecipesButton {
+  background-color: #21531a;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 6px #163d12; /* Darker shadow for 3D effect */
+  transition: all 0.1s ease-in-out;
+}
+
+#searchButton:hover, #lastRecipesButton:hover, #saveRecipesButton:hover {
+  background-color: #184b18;
+}
+
+#searchButton:active, #lastRecipesButton:active, #saveRecipesButton:active {
+  box-shadow: 0 3px #163d12;
+  transform: translateY(3px); /* Simulates button press */
+}

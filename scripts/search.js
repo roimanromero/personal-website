@@ -1,5 +1,15 @@
-// Updated search.js
-document.getElementById('searchButton').addEventListener('click', function () {
+document.getElementById('searchButton').addEventListener('click', performSearch);
+
+// Trigger search on "Enter" key press in the search bar
+document.getElementById('searchBar').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent default form submission
+        performSearch();
+    }
+});
+
+// Define the search function
+function performSearch() {
     const query = "mango " + document.getElementById('searchBar').value.trim();
 
     if (query) {
@@ -22,4 +32,4 @@ document.getElementById('searchButton').addEventListener('click', function () {
     } else {
         alert("Please enter a search term.");
     }
-});
+}
