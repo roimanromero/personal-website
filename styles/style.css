@@ -408,3 +408,40 @@ main section img {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
+.recipe-card {
+  position: relative;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: green;
+  display: none;
+}
+
+.recipe-card .checkmark.hidden {
+  display: none;
+}
+
+.recipe-card .checkmark:not(.hidden) {
+  display: block;
+}
+
+#saveRecipesButton {
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 1em;
+  background-color: #21531a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

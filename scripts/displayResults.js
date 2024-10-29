@@ -1,27 +1,31 @@
-// Updated displayResults.js
 document.addEventListener('DOMContentLoaded', function () {
     const resultsContainer = document.getElementById('recipeCardsContainer');
+    const saveButton = document.getElementById('saveRecipesButton');
     const searchResults = JSON.parse(localStorage.getItem('searchResults'));
+    let selectedRecipes = [];
 
     if (searchResults && searchResults.length > 0) {
         searchResults.forEach(recipe => {
             const card = document.createElement('div');
             card.className = 'recipe-card';
 
-            // Display up to 5 ingredients
-            const ingredients = recipe.extendedIngredients
-                ? recipe.extendedIngredients.slice(0, 5).map(ingredient => ingredient.name).join(', ')
-                : 'Ingredients unavailable';
-
             card.innerHTML = `
                 <h3>${recipe.title}</h3>
-                <p>Ingredients: ${ingredients}</p>
+                <span class="checkmark hidden">&#10003;</span>
             `;
 
-            // Set up click event to navigate to recipe details
+            // Handle card selection
             card.addEventListener('click', function () {
-                localStorage.setItem('selectedRecipe', JSON.stringify(recipe));
-                window.location.href = 'recipeDetails.html';
+                const checkmark = card.querySelector('.checkmark');
+                if (selectedRecipes.includes(recipe)) {
+                    // Deselect
+                    selectedRecipes = selectedRecipes.filter(r => r.id !== recipe.id);
+                    checkmark.classList.add('hidden');
+                } else {
+                    // Select
+                    selectedRecipes.push(recipe);
+                    checkmark.classList.remove('hidden');
+                }
             });
 
             resultsContainer.appendChild(card);
@@ -29,4 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         resultsContainer.innerHTML = "<p>No results found. Please try a different search.</p>";
     }
+
+    // Save selected recipes
+    saveButton.addEventListener('click', function () {
+        if (selectedRecipes.length > 0) {
+            localStorage.setItem('lastRecipes', JSON.stringify(selectedRecipes.slice(-3))); // Save last 3 selected recipes
+            alert("Selected recipes saved!");
+            window.location.href = 'lastRecipes.html';
+        } else {
+            alert("No recipes selected.");
+        }
+    });
 });
