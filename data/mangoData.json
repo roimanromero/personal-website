@@ -1,0 +1,80 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Mango Salsa",
+            "image": "images/mango_salsa.jpg",
+            "ingredients": [
+                { "name": "Mango", "quantity": "2 cups, diced" },
+                { "name": "Red Onion", "quantity": "1/4 cup, finely chopped" },
+                { "name": "Cilantro", "quantity": "2 tbsp, chopped" },
+                { "name": "Lime Juice", "quantity": "2 tbsp" },
+                { "name": "Salt", "quantity": "to taste" }
+            ],
+            "instructions": "Mix all ingredients together in a bowl. Serve fresh.",
+            "cookingTime": 10,
+            "servings": 4,
+            "nutrition": {
+                "calories": 100,
+                "protein": "1g",
+                "fat": "0g",
+                "carbs": "26g"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Mango Smoothie",
+            "image": "images/mango_smoothie.jpg",
+            "ingredients": [
+                { "name": "Mango", "quantity": "1 cup, sliced" },
+                { "name": "Yogurt", "quantity": "1/2 cup" },
+                { "name": "Milk", "quantity": "1/2 cup" },
+                { "name": "Honey", "quantity": "1 tbsp" }
+            ],
+            "instructions": "Blend all ingredients until smooth. Serve chilled.",
+            "cookingTime": 5,
+            "servings": 2,
+            "nutrition": {
+                "calories": 150,
+                "protein": "5g",
+                "fat": "3g",
+                "carbs": "32g"
+            }
+        },
+        {
+            "id": 3,
+            "title": "Mango Avocado Salad",
+            "image": "images/mango_avocado_salad.jpg",
+            "ingredients": [
+                { "name": "Mango", "quantity": "1 cup, diced" },
+                { "name": "Avocado", "quantity": "1 cup, diced" },
+                { "name": "Red Bell Pepper", "quantity": "1/2 cup, diced" },
+                { "name": "Lime Juice", "quantity": "2 tbsp" },
+                { "name": "Salt", "quantity": "to taste" }
+            ],
+            "instructions": "Combine mango, avocado, and pepper. Drizzle with lime juice and salt.",
+            "cookingTime": 15,
+            "servings": 4,
+            "nutrition": {
+                "calories": 120,
+                "protein": "2g",
+                "fat": "8g",
+                "carbs": "15g"
+            }
+        }
+    ],
+    "trivia": [
+        {
+            "id": 1,
+            "fact": "Mangoes are the most consumed fruit in the world!"
+        },
+        {
+            "id": 2,
+            "fact": "There are over 500 varieties of mangoes worldwide."
+        },
+        {
+            "id": 3,
+            "fact": "Mangoes are rich in Vitamin C, which boosts immune health."
+        }
+    ]
+}
